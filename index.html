@@ -6,7 +6,207 @@
 :root{--ink:#1a1a1a;--ink2:#555;--ink3:#8a8a8a;--line:#e3e3e3;--bg:#fff;--bg2:#f5f5f5;--blue:#4472C4;--orange:#ED7D31}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Calibri,Carlito,"Segoe UI",Arial,sans-serif;font-size:15.5px;line-height:1.55}
+/* === TYPOGRAPHY — NYT-STYLE === */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+
+
+/* ==============================
+   BODY / TEKS NARATIF
+   ============================== */
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+
+    font-size:15.5px;
+    line-height:1.65;
+
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+
+/* ==============================
+   HEADLINE / JUDUL UTAMA
+   Cheltenham-style
+   ============================== */
+
+header.hero h1,
+section.part > h2,
+.opener h2{
+    font-family:
+        "Cheltenham",
+        "Cheltenham Normal",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:400;
+    letter-spacing:-0.03em;
+}
+
+
+/* Judul utama */
+
+header.hero h1{
+    font-size:46px;
+    line-height:1.08;
+}
+
+
+/* Judul section */
+
+section.part > h2{
+    font-size:28px;
+    line-height:1.15;
+}
+
+
+/* ==============================
+   SUBHEADING
+   ============================== */
+
+h3.sub,
+.card h4,
+.gallery-loc,
+.island-head b,
+figure.foto figcaption b{
+    font-family:
+        "Cheltenham",
+        "Cheltenham Normal",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:700;
+}
+
+
+/* ==============================
+   DATA / CHART / TABLE / UI
+   Franklin / Source Sans style
+   ============================== */
+
+svg,
+svg text,
+svg tspan,
+
+table,
+table th,
+table td,
+table caption,
+
+.kpi,
+.kpi .l,
+
+nav,
+nav a,
+
+button,
+.map-btn,
+.place-card,
+
+.leaflet-container,
+.leaflet-popup-content,
+.leaflet-control-layers,
+.leaflet-marker-icon div{
+
+    font-family:
+        "Franklin Gothic",
+        "Franklin Gothic Medium",
+        "Source Sans 3",
+        "Arial Narrow",
+        Arial,
+        sans-serif !important;
+}
+
+
+/* ==============================
+   KPI ANGKA BESAR
+   ============================== */
+
+.kpi .v{
+    font-family:
+        "Cheltenham",
+        "Cheltenham Normal",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight:700;
+    letter-spacing:-0.025em;
+}
+
+
+/* ==============================
+   LABEL KECIL / KICKER
+   ============================== */
+
+header.hero .kicker,
+header.hero .meta,
+section.part > h2 small,
+.opener h2 small,
+.tag,
+figure.foto figcaption .loc{
+
+    font-family:
+        "Franklin Gothic",
+        "Source Sans 3",
+        Arial,
+        sans-serif;
+
+    font-weight:600;
+}
+
+
+/* ==============================
+   PARAGRAF / CAPTION
+   ============================== */
+
+p,
+section.part > p.lead,
+.card .note,
+.callout,
+figure.foto figcaption,
+.opener p{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        Times,
+        serif;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media(max-width:700px){
+
+    body{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    header.hero h1{
+        font-size:32px;
+        line-height:1.12;
+    }
+
+    section.part > h2{
+        font-size:24px;
+    }
+
+}
 header.hero{background:#1a1a1a;color:#fff;padding:56px 24px 44px}
 header.hero .in{max-width:1100px;margin:0 auto}
 header.hero h1{font-size:34px;margin:0 0 8px;font-weight:700;letter-spacing:-.3px}
@@ -83,14 +283,37 @@ footer{border-top:1px solid var(--line);color:var(--ink3);font-size:13px;padding
 @media(max-width:520px){#research-map{height:420px}.map-grid{grid-template-columns:1fr}}
 @media print{nav.toc{display:none}.card{break-inside:avoid}section.part{break-before:page}header.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 
-/* === dokumentasi lapangan & pembuka drone === */
+/* === dokumentasi lapangan & pembuka drone ===
 header.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;padding:0;overflow:hidden;background:#0f1418}
 header.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:heroFade 24s infinite;transform-origin:center}
 header.hero .bg:nth-child(1){animation-delay:0s}
 header.hero .bg:nth-child(2){animation-delay:8s}
-header.hero .bg:nth-child(3){animation-delay:16s}
-@keyframes heroFade{0%{opacity:0;transform:scale(1.04)}8%{opacity:1}33%{opacity:1;transform:scale(1.12)}41%{opacity:0;transform:scale(1.14)}100%{opacity:0}}
-@media(prefers-reduced-motion:reduce){header.hero .bg{animation:none}header.hero .bg:nth-child(1){opacity:1}}
+header.hero .bg:nth-child(3){animation-delay:16s} */
+
+/* === dokumentasi lapangan & pembuka drone === */
+
+header.hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    align-items:flex-end;
+    padding:0;
+    overflow:hidden;
+    background:#0f1418;
+}
+
+header.hero .hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    z-index:0;
+}
+
+/* @keyframes heroFade{0%{opacity:0;transform:scale(1.04)}8%{opacity:1}33%{opacity:1;transform:scale(1.12)}41%{opacity:0;transform:scale(1.14)}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){header.hero .bg{animation:none}header.hero .bg:nth-child(1){opacity:1}} */
 header.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.72) 100%)}
 header.hero .in{position:relative;z-index:2;width:100%;max-width:1100px;margin:0 auto;padding:120px 24px 40px}
 header.hero .kicker{display:inline-block;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.35);padding:5px 12px;border-radius:999px;margin-bottom:16px;backdrop-filter:blur(4px)}
@@ -135,9 +358,12 @@ figure.foto img{cursor:zoom-in}
 </style></head>
 <body>
 <header class='hero'>
-<div class='bg' style="background-image:url('assets/media/img_001_0589c5922e352657.jpg')"></div>
+<!-- <div class='bg' style="background-image:url('assets/media/img_001_0589c5922e352657.jpg')"></div>
 <div class='bg' style="background-image:url('assets/media/img_002_35bd24dbe7e43c3b.jpg')"></div>
-<div class='bg' style="background-image:url('assets/media/img_003_75eca71fc7a434af.jpg')"></div>
+<div class='bg' style="background-image:url('assets/media/img_003_75eca71fc7a434af.jpg')"></div> -->
+<video class="hero-video" autoplay muted loop playsinline preload="metadata">
+    <source src="assets/media/header_hero_video.mp4" type="video/mp4">
+</video>
 <div class='shade'></div>
 <div class='in'>
 <span class='kicker'>Laporan visual · Survei ISPF 2026</span>
@@ -145,7 +371,7 @@ figure.foto img{cursor:zoom-in}
 <p>Laporan visual hasil survei ISPF 2026: profil responden, persepsi sosial dan gender, praktik pertanian, keragaman pangan, dan kerentanan iklim, dilengkapi dokumentasi lapangan dari tiga pulau.</p>
 <div class='meta'><span>418 responden</span><span>8 desa · 5 kabupaten · 3 pulau</span><span>Survei Juli–Agustus 2026</span><span>Bagian A · B · C · Dokumentasi</span></div>
 </div>
-<div class='credit'>Foto udara (drone): Desa Boru &amp; Desa Sinamalaka, Flores Timur · Agustus 2026</div>
+<div class='credit'>Foto udara (drone): Desa Boru, Flores Timur · Agustus 2026</div>
 </header>
 <nav class='toc'><div class='in'>
 <a href='#pembuka'>Pembuka</a><a href='#ringkasan'>Ringkasan</a><a href='#peta-lokasi'>Peta Lokasi</a><a href='#profil'>A · Profil Responden</a><a href='#bagian-b'>B · Persepsi Sosial</a><a href='#bagian-c'>C · Praktik Pertanian &amp; Pangan</a><a href='#sintesis'>D · Sintesis</a><a href='#dokumentasi'>E · Dokumentasi</a>
